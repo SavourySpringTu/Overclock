@@ -1,0 +1,9 @@
+/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/Overclock.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/edit_cache.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/rebuild_cache.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/list_install_components.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/install.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/install/local.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/install/strip.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/Overclock_autogen_timestamp_deps.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/Overclock_autogen.dir
