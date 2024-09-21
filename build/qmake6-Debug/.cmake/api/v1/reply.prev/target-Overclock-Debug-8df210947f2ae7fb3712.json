@@ -71,13 +71,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 66,
+				"line" : 68,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 49,
+				"line" : 51,
 				"parent" : 0
 			},
 			{
@@ -286,7 +286,8 @@
 				1,
 				2,
 				6,
-				7
+				7,
+				10
 			]
 		}
 	],
@@ -372,7 +373,8 @@
 				1,
 				2,
 				6,
-				7
+				7,
+				10
 			]
 		},
 		{
@@ -382,7 +384,8 @@
 				3,
 				5,
 				8,
-				9
+				9,
+				11
 			]
 		},
 		{
@@ -390,14 +393,14 @@
 			"sourceIndexes" : 
 			[
 				4,
-				10
+				12
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				11
+				13
 			]
 		}
 	],
@@ -453,6 +456,17 @@
 			"backtrace" : 4,
 			"path" : "ThreadTempCPU.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "test.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "test.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,

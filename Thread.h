@@ -1,20 +1,22 @@
-#ifndef THREADTEMPCPU_H
-#define THREADTEMPCPU_H
+#ifndef THREAD_H
+#define THREAD_H
 #include <QApplication>
 #include <QWidget>
 #include <QThread>
 #include <QTextEdit>
 #include <QDebug>
 
-class ThreadTempCPU: public QThread{
+class Thread: public QThread{
     Q_OBJECT
     public:
-        ThreadTempCPU(QObject *parent = nullptr);
+        Thread(QObject *parent = nullptr);
     signals:
         void temperatureUpdated(double temperature);
+        void usagecpuUpdated(double usagecpu);
     private:
         void run() override;
         double getTemperature();
+        double getUsagecpu();
 };
 
-#endif // THREADTEMPCPU_H
+#endif // THREAD_H

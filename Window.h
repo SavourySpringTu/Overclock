@@ -7,7 +7,7 @@
 #include <QLabel>
 #include <QGridLayout>
 #include <QThread>
-#include "ThreadTempCPU.h"
+#include "Thread.h"
 
 class Window: public QWidget{
     Q_OBJECT
@@ -15,15 +15,16 @@ class Window: public QWidget{
     public:
         Window(QWidget *parent = nullptr);
     public slots:
-        //void updateTemperature(double temperature);
+        void updateTemperature(double temperature);
+        void updateUsagecpu(double usagecpu);
     private:
         QTextEdit *textedit_temp;
-        //QTextEdit *textedit_use;
+        QTextEdit *textedit_use;
         QPushButton *button_exit;
         QLabel *label_temp;
-        //QLabel *label_use;
+        QLabel *label_use;
         QPushButton *run;
-        ThreadTempCPU *thread;
+        Thread *thread;
         QGridLayout *layout;
 };
 
