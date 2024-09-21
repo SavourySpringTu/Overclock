@@ -15,11 +15,13 @@ class Window: public QWidget{
     public:
         Window(QWidget *parent = nullptr);
     public slots:
-        void updateTemperature(double temperature);
+        //void updateTemperature(double temperature);
     private:
         QTextEdit *textedit_temp;
+        //QTextEdit *textedit_use;
         QPushButton *button_exit;
         QLabel *label_temp;
+        //QLabel *label_use;
         QPushButton *run;
         ThreadTempCPU *thread;
         QGridLayout *layout;
