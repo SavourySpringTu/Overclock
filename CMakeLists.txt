@@ -27,8 +27,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Window.cpp
         Thread.cpp
         Thread.h
-        test.h
-        test.cpp
+
+
+        Monitor.h
+        Monitor.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Overclock APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

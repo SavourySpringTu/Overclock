@@ -207,6 +207,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/Monitor.h",
+			"MU",
+			"EWIEGA46WW/moc_Monitor.cpp",
+			null
+		],
+		[
 			"/home/savouryspringtu/Tu/Projects/Overclock/Thread.h",
 			"MU",
 			"EWIEGA46WW/moc_Thread.cpp",
@@ -222,12 +228,6 @@
 			"/home/savouryspringtu/Tu/Projects/Overclock/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
-			null
-		],
-		[
-			"/home/savouryspringtu/Tu/Projects/Overclock/test.h",
-			"MU",
-			"EWIEGA46WW/moc_test.cpp",
 			null
 		]
 	],
@@ -289,6 +289,7 @@
 	"SETTINGS_FILE" : "/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/Overclock_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/savouryspringtu/Tu/Projects/Overclock/Monitor.cpp", "MU", null ],
 		[ "/home/savouryspringtu/Tu/Projects/Overclock/Thread.cpp", "MU", null ],
 		[ "/home/savouryspringtu/Tu/Projects/Overclock/Window.cpp", "MU", null ],
 		[ "/home/savouryspringtu/Tu/Projects/Overclock/main.cpp", "MU", null ],
@@ -296,8 +297,7 @@
 			"/home/savouryspringtu/Tu/Projects/Overclock/mainwindow.cpp",
 			"MU",
 			null
-		],
-		[ "/home/savouryspringtu/Tu/Projects/Overclock/test.cpp", "MU", null ]
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

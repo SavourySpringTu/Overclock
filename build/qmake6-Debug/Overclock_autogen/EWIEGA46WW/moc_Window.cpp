@@ -8,7 +8,6 @@
 
 #include <memory>
 #include "../../../../Window.h"
-#include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'Window.h' doesn't include <QObject>."
@@ -27,31 +26,16 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_Window_t {
-    uint offsetsAndSizes[12];
+    uint offsetsAndSizes[2];
     char stringdata0[7];
-    char stringdata1[18];
-    char stringdata2[1];
-    char stringdata3[12];
-    char stringdata4[15];
-    char stringdata5[9];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_Window_t::offsetsAndSizes) + ofs), len 
 Q_CONSTINIT static const qt_meta_stringdata_Window_t qt_meta_stringdata_Window = {
     {
-        QT_MOC_LITERAL(0, 6),  // "Window"
-        QT_MOC_LITERAL(7, 17),  // "updateTemperature"
-        QT_MOC_LITERAL(25, 0),  // ""
-        QT_MOC_LITERAL(26, 11),  // "temperature"
-        QT_MOC_LITERAL(38, 14),  // "updateUsagecpu"
-        QT_MOC_LITERAL(53, 8)   // "usagecpu"
+        QT_MOC_LITERAL(0, 6)   // "Window"
     },
-    "Window",
-    "updateTemperature",
-    "",
-    "temperature",
-    "updateUsagecpu",
-    "usagecpu"
+    "Window"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -62,20 +46,12 @@ Q_CONSTINIT static const uint qt_meta_data_Window[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       0,    0, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        0,       // signalCount
-
- // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   26,    2, 0x0a,    1 /* Public */,
-       4,    1,   29,    2, 0x0a,    3 /* Public */,
-
- // slots: parameters
-    QMetaType::Void, QMetaType::Double,    3,
-    QMetaType::Void, QMetaType::Double,    5,
 
        0        // eod
 };
@@ -88,28 +64,17 @@ Q_CONSTINIT const QMetaObject Window::staticMetaObject = { {
     nullptr,
     qt_incomplete_metaTypeArray<qt_meta_stringdata_Window_t,
         // Q_OBJECT / Q_GADGET
-        QtPrivate::TypeAndForceComplete<Window, std::true_type>,
-        // method 'updateTemperature'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<double, std::false_type>,
-        // method 'updateUsagecpu'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<double, std::false_type>
+        QtPrivate::TypeAndForceComplete<Window, std::true_type>
     >,
     nullptr
 } };
 
 void Window::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
 {
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        auto *_t = static_cast<Window *>(_o);
-        (void)_t;
-        switch (_id) {
-        case 0: _t->updateTemperature((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 1: _t->updateUsagecpu((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        default: ;
-        }
-    }
+    (void)_o;
+    (void)_id;
+    (void)_c;
+    (void)_a;
 }
 
 const QMetaObject *Window::metaObject() const
@@ -128,17 +93,6 @@ void *Window::qt_metacast(const char *_clname)
 int Window::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 {
     _id = QWidget::qt_metacall(_c, _id, _a);
-    if (_id < 0)
-        return _id;
-    if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
-            qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
-    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 2;
-    }
     return _id;
 }
 QT_WARNING_POP

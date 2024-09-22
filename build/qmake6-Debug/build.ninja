@@ -89,9 +89,9 @@ build CMakeFiles/Overclock.dir/Thread.cpp.o: CXX_COMPILER__Overclock_unscanned_D
   OBJECT_DIR = CMakeFiles/Overclock.dir
   OBJECT_FILE_DIR = CMakeFiles/Overclock.dir
 
-build CMakeFiles/Overclock.dir/test.cpp.o: CXX_COMPILER__Overclock_unscanned_Debug /home/savouryspringtu/Tu/Projects/Overclock/test.cpp || cmake_object_order_depends_target_Overclock
+build CMakeFiles/Overclock.dir/Monitor.cpp.o: CXX_COMPILER__Overclock_unscanned_Debug /home/savouryspringtu/Tu/Projects/Overclock/Monitor.cpp || cmake_object_order_depends_target_Overclock
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/Overclock.dir/test.cpp.o.d
+  DEP_FILE = CMakeFiles/Overclock.dir/Monitor.cpp.o.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always -fPIC
   INCLUDES = -I/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/Overclock_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui
   OBJECT_DIR = CMakeFiles/Overclock.dir
@@ -105,7 +105,7 @@ build CMakeFiles/Overclock.dir/test.cpp.o: CXX_COMPILER__Overclock_unscanned_Deb
 #############################################
 # Link the executable Overclock
 
-build Overclock: CXX_EXECUTABLE_LINKER__Overclock_Debug CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.o CMakeFiles/Overclock.dir/main.cpp.o CMakeFiles/Overclock.dir/mainwindow.cpp.o CMakeFiles/Overclock.dir/Window.cpp.o CMakeFiles/Overclock.dir/Thread.cpp.o CMakeFiles/Overclock.dir/test.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || Overclock_autogen Overclock_autogen_timestamp_deps
+build Overclock: CXX_EXECUTABLE_LINKER__Overclock_Debug CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.o CMakeFiles/Overclock.dir/main.cpp.o CMakeFiles/Overclock.dir/mainwindow.cpp.o CMakeFiles/Overclock.dir/Window.cpp.o CMakeFiles/Overclock.dir/Thread.cpp.o CMakeFiles/Overclock.dir/Monitor.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || Overclock_autogen Overclock_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
   OBJECT_DIR = CMakeFiles/Overclock.dir

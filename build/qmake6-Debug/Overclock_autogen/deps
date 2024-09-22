@@ -33,6 +33,8 @@ Overclock_autogen/timestamp: \
 	/home/savouryspringtu/Qt/Tools/CMake/share/cmake-3.29/Modules/Platform/Linux.cmake \
 	/home/savouryspringtu/Qt/Tools/CMake/share/cmake-3.29/Modules/Platform/UnixPaths.cmake \
 	/home/savouryspringtu/Tu/Projects/Overclock/CMakeLists.txt \
+	/home/savouryspringtu/Tu/Projects/Overclock/Monitor.cpp \
+	/home/savouryspringtu/Tu/Projects/Overclock/Monitor.h \
 	/home/savouryspringtu/Tu/Projects/Overclock/Thread.cpp \
 	/home/savouryspringtu/Tu/Projects/Overclock/Thread.h \
 	/home/savouryspringtu/Tu/Projects/Overclock/Window.cpp \
@@ -44,8 +46,6 @@ Overclock_autogen/timestamp: \
 	/home/savouryspringtu/Tu/Projects/Overclock/main.cpp \
 	/home/savouryspringtu/Tu/Projects/Overclock/mainwindow.cpp \
 	/home/savouryspringtu/Tu/Projects/Overclock/mainwindow.h \
-	/home/savouryspringtu/Tu/Projects/Overclock/test.cpp \
-	/home/savouryspringtu/Tu/Projects/Overclock/test.h \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
@@ -464,6 +464,7 @@ Overclock_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTextEdit \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
