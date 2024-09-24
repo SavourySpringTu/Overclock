@@ -1,0 +1,1 @@
+/bin/c++ CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.o -o Overclock  /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so 

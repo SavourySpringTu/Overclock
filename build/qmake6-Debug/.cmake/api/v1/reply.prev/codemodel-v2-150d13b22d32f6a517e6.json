@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-18fe23feb8c8c1842b48.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Overclock",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Overclock::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Overclock-Debug-aef098500fa3a95b3b35.json",
+					"name" : "Overclock",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Overclock_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Overclock_autogen-Debug-a8f9735abc507cf9c912.json",
+					"name" : "Overclock_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Overclock_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Overclock_autogen_timestamp_deps-Debug-7ce9dad07f8fd48c61ce.json",
+					"name" : "Overclock_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Overclock_other_files::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Overclock_other_files-Debug-f0ecf6d67d56a367359f.json",
+					"name" : "Overclock_other_files",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug",
+		"source" : "/home/savouryspringtu/Tu/Projects/Overclock"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

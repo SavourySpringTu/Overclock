@@ -1,0 +1,26 @@
+#ifndef THREAD_H
+#define THREAD_H
+#include <QApplication>
+#include <QWidget>
+#include <QThread>
+#include <QTextEdit>
+#include <QDebug>
+
+class Thread: public QThread{
+    Q_OBJECT
+    public:
+        Thread(QObject *parent = nullptr);
+    signals:
+        void temperatureUpdated(double temperature);
+        void usagecpuUpdated(double usagecpu);
+        void usageramUpdated(double usageram );
+        void clockcpuUpdated(double clockcpu);
+    private:
+        void run() override;
+        double getTemperatureCPU();
+        double getUsageCPU();
+        double getUsageRAM();
+        double getClockCPU();
+};
+
+#endif // THREAD_H

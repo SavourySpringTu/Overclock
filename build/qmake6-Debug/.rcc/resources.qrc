@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="src/resources.qrc">/home/savouryspringtu/Tu/Projects/Overclock/src/resources.qrc</file>
+  </qresource>
+</RCC>
+

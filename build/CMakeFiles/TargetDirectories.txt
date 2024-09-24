@@ -1,0 +1,9 @@
+/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/Overclock.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/edit_cache.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/rebuild_cache.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/list_install_components.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/install.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/install/local.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/install/strip.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/Overclock_autogen_timestamp_deps.dir
+/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/Overclock_autogen.dir
