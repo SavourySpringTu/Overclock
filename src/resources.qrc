@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>resources/microchip-solid.svg</file>
-        <file>resources/avt.jpg</file>
-    </qresource>
-</RCC>

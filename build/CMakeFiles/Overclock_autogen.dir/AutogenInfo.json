@@ -7,9 +7,62 @@
 	"CMAKE_LIST_FILES" : 
 	[
 		"/home/savouryspringtu/Tu/Projects/Overclock/CMakeLists.txt",
+		"/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeSystem.cmake.in",
 		"/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/3.28.3/CMakeSystem.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeUnixFindMake.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Platform/Linux-Determine-CXX.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in",
 		"/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake",
@@ -24,6 +77,18 @@
 		"/usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake",
 		"/usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp",
+		"/usr/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake",
+		"/usr/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake",
+		"/usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in",
+		"/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
 		"/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake",
@@ -197,12 +262,51 @@
 		"/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake",
 		"/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake",
 		"/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake",
+		"/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
 		"/usr/share/cmake-3.28/Modules/GNUInstallDirs.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/savouryspringtu/Tu/Projects/Overclock",
 	"DEP_FILE" : "/home/savouryspringtu/Tu/Projects/Overclock/build/Overclock_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "Overclock_autogen/timestamp",
-	"HEADERS" : [],
+	"HEADERS" : 
+	[
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/src/HEADERS/About.h",
+			"MU",
+			"JVRDAJRZG7/moc_About.cpp",
+			null
+		],
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/src/HEADERS/Global.h",
+			"MU",
+			"JVRDAJRZG7/moc_Global.cpp",
+			null
+		],
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/src/HEADERS/Information.h",
+			"MU",
+			"JVRDAJRZG7/moc_Information.cpp",
+			null
+		],
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/src/HEADERS/Monitor.h",
+			"MU",
+			"JVRDAJRZG7/moc_Monitor.cpp",
+			null
+		],
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/src/HEADERS/Thread.h",
+			"MU",
+			"JVRDAJRZG7/moc_Thread.cpp",
+			null
+		],
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/src/HEADERS/Window.h",
+			"MU",
+			"JVRDAJRZG7/moc_Window.cpp",
+			null
+		]
+	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/savouryspringtu/Tu/Projects/Overclock/build/Overclock_autogen/include",
 	"MOC_COMPILATION_FILE" : "/home/savouryspringtu/Tu/Projects/Overclock/build/Overclock_autogen/mocs_compilation.cpp",
@@ -262,7 +366,44 @@
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 4,
 	"SETTINGS_FILE" : "/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/Overclock_autogen.dir/AutogenUsed.txt",
-	"SOURCES" : [],
+	"SOURCES" : 
+	[
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/About.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Global.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Information.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Monitor.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Thread.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Window.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/main.cpp",
+			"MU",
+			null
+		]
+	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : [],

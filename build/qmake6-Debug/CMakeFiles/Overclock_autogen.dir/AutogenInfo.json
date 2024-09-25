@@ -208,39 +208,39 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/savouryspringtu/Tu/Projects/Overclock/src/HEADERS/About.h",
+			"/home/savouryspringtu/Tu/Projects/Overclock/About.h",
 			"MU",
-			"JVRDAJRZG7/moc_About.cpp",
+			"EWIEGA46WW/moc_About.cpp",
 			null
 		],
 		[
-			"/home/savouryspringtu/Tu/Projects/Overclock/src/HEADERS/Global.h",
+			"/home/savouryspringtu/Tu/Projects/Overclock/Global.h",
 			"MU",
-			"JVRDAJRZG7/moc_Global.cpp",
+			"EWIEGA46WW/moc_Global.cpp",
 			null
 		],
 		[
-			"/home/savouryspringtu/Tu/Projects/Overclock/src/HEADERS/Information.h",
+			"/home/savouryspringtu/Tu/Projects/Overclock/Information.h",
 			"MU",
-			"JVRDAJRZG7/moc_Information.cpp",
+			"EWIEGA46WW/moc_Information.cpp",
 			null
 		],
 		[
-			"/home/savouryspringtu/Tu/Projects/Overclock/src/HEADERS/Monitor.h",
+			"/home/savouryspringtu/Tu/Projects/Overclock/Monitor.h",
 			"MU",
-			"JVRDAJRZG7/moc_Monitor.cpp",
+			"EWIEGA46WW/moc_Monitor.cpp",
 			null
 		],
 		[
-			"/home/savouryspringtu/Tu/Projects/Overclock/src/HEADERS/Thread.h",
+			"/home/savouryspringtu/Tu/Projects/Overclock/Thread.h",
 			"MU",
-			"JVRDAJRZG7/moc_Thread.cpp",
+			"EWIEGA46WW/moc_Thread.cpp",
 			null
 		],
 		[
-			"/home/savouryspringtu/Tu/Projects/Overclock/src/HEADERS/Window.h",
+			"/home/savouryspringtu/Tu/Projects/Overclock/Window.h",
 			"MU",
-			"JVRDAJRZG7/moc_Window.cpp",
+			"EWIEGA46WW/moc_Window.cpp",
 			null
 		]
 	],
@@ -257,9 +257,8 @@
 	],
 	"MOC_INCLUDES" : 
 	[
-		"/home/savouryspringtu/Tu/Projects/Overclock/src/HEADERS",
-		"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES",
-		"/home/savouryspringtu/Tu/Projects/Overclock/src/FORMS",
+		"/home/savouryspringtu/Tu/Projects/Overclock",
+		"/home/savouryspringtu/Tu/Projects/Overclock/resources",
 		"/usr/include/x86_64-linux-gnu/qt6/QtCore",
 		"/usr/include/x86_64-linux-gnu/qt6",
 		"/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++",
@@ -305,41 +304,17 @@
 	"SETTINGS_FILE" : "/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/Overclock_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/savouryspringtu/Tu/Projects/Overclock/About.cpp", "MU", null ],
+		[ "/home/savouryspringtu/Tu/Projects/Overclock/Global.cpp", "MU", null ],
 		[
-			"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/About.cpp",
+			"/home/savouryspringtu/Tu/Projects/Overclock/Information.cpp",
 			"MU",
 			null
 		],
-		[
-			"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Global.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Information.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Monitor.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Thread.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Window.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/main.cpp",
-			"MU",
-			null
-		]
+		[ "/home/savouryspringtu/Tu/Projects/Overclock/Monitor.cpp", "MU", null ],
+		[ "/home/savouryspringtu/Tu/Projects/Overclock/Thread.cpp", "MU", null ],
+		[ "/home/savouryspringtu/Tu/Projects/Overclock/Window.cpp", "MU", null ],
+		[ "/home/savouryspringtu/Tu/Projects/Overclock/main.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

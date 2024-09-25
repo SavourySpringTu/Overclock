@@ -69,10 +69,23 @@ include CMakeFiles/Overclock.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Overclock.dir/flags.make
 
+.rcc/qrc_resources.cpp: /home/savouryspringtu/Tu/Projects/Overclock/src/resources/resources.qrc
+.rcc/qrc_resources.cpp: .rcc/resources.qrc
+.rcc/qrc_resources.cpp: /usr/lib/qt6/libexec/rcc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running rcc for resource resources"
+	/usr/lib/qt6/libexec/rcc --output /home/savouryspringtu/Tu/Projects/Overclock/build/.rcc/qrc_resources.cpp --name resources /home/savouryspringtu/Tu/Projects/Overclock/build/.rcc/resources.qrc
+
+Overclock_autogen/timestamp: /usr/lib/qt6/libexec/moc
+Overclock_autogen/timestamp: /usr/lib/qt6/libexec/uic
+Overclock_autogen/timestamp: CMakeFiles/Overclock.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic MOC and UIC for target Overclock"
+	/usr/bin/cmake -E cmake_autogen /home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/Overclock_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E touch /home/savouryspringtu/Tu/Projects/Overclock/build/Overclock_autogen/timestamp
+
 CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.o: CMakeFiles/Overclock.dir/flags.make
 CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.o: Overclock_autogen/mocs_compilation.cpp
 CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.o: CMakeFiles/Overclock.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.o"
 	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.o -MF CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.o -c /home/savouryspringtu/Tu/Projects/Overclock/build/Overclock_autogen/mocs_compilation.cpp
 
 CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.i: cmake_force
@@ -83,14 +96,142 @@ CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.s"
 	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/savouryspringtu/Tu/Projects/Overclock/build/Overclock_autogen/mocs_compilation.cpp -o CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.s
 
+CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.o: CMakeFiles/Overclock.dir/flags.make
+CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.o: /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/main.cpp
+CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.o: CMakeFiles/Overclock.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.o"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.o -MF CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.o.d -o CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.o -c /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/main.cpp
+
+CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/main.cpp > CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.i
+
+CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/main.cpp -o CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.s
+
+CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.o: CMakeFiles/Overclock.dir/flags.make
+CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.o: /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Information.cpp
+CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.o: CMakeFiles/Overclock.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.o"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.o -MF CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.o.d -o CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.o -c /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Information.cpp
+
+CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Information.cpp > CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.i
+
+CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Information.cpp -o CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.s
+
+CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.o: CMakeFiles/Overclock.dir/flags.make
+CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.o: /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Monitor.cpp
+CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.o: CMakeFiles/Overclock.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.o"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.o -MF CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.o.d -o CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.o -c /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Monitor.cpp
+
+CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Monitor.cpp > CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.i
+
+CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Monitor.cpp -o CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.s
+
+CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.o: CMakeFiles/Overclock.dir/flags.make
+CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.o: /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Thread.cpp
+CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.o: CMakeFiles/Overclock.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.o"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.o -MF CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.o.d -o CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.o -c /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Thread.cpp
+
+CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Thread.cpp > CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.i
+
+CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Thread.cpp -o CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.s
+
+CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.o: CMakeFiles/Overclock.dir/flags.make
+CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.o: /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Window.cpp
+CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.o: CMakeFiles/Overclock.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.o"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.o -MF CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.o.d -o CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.o -c /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Window.cpp
+
+CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Window.cpp > CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.i
+
+CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Window.cpp -o CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.s
+
+CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.o: CMakeFiles/Overclock.dir/flags.make
+CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.o: /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Global.cpp
+CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.o: CMakeFiles/Overclock.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.o"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.o -MF CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.o.d -o CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.o -c /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Global.cpp
+
+CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Global.cpp > CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.i
+
+CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/Global.cpp -o CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.s
+
+CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.o: CMakeFiles/Overclock.dir/flags.make
+CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.o: /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/About.cpp
+CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.o: CMakeFiles/Overclock.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.o"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.o -MF CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.o.d -o CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.o -c /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/About.cpp
+
+CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/About.cpp > CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.i
+
+CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/savouryspringtu/Tu/Projects/Overclock/src/SOURCES/About.cpp -o CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.s
+
+CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.o: CMakeFiles/Overclock.dir/flags.make
+CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.o: .rcc/qrc_resources.cpp
+CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.o: CMakeFiles/Overclock.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.o"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.o -MF CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.o.d -o CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.o -c /home/savouryspringtu/Tu/Projects/Overclock/build/.rcc/qrc_resources.cpp
+
+CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.i"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/savouryspringtu/Tu/Projects/Overclock/build/.rcc/qrc_resources.cpp > CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.i
+
+CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.s"
+	/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/savouryspringtu/Tu/Projects/Overclock/build/.rcc/qrc_resources.cpp -o CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.s
+
 # Object files for target Overclock
 Overclock_OBJECTS = \
-"CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.o"
+"CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.o" \
+"CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.o" \
+"CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.o" \
+"CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.o" \
+"CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.o" \
+"CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.o" \
+"CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.o" \
+"CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.o" \
+"CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.o"
 
 # External object files for target Overclock
 Overclock_EXTERNAL_OBJECTS =
 
 Overclock: CMakeFiles/Overclock.dir/Overclock_autogen/mocs_compilation.cpp.o
+Overclock: CMakeFiles/Overclock.dir/src/SOURCES/main.cpp.o
+Overclock: CMakeFiles/Overclock.dir/src/SOURCES/Information.cpp.o
+Overclock: CMakeFiles/Overclock.dir/src/SOURCES/Monitor.cpp.o
+Overclock: CMakeFiles/Overclock.dir/src/SOURCES/Thread.cpp.o
+Overclock: CMakeFiles/Overclock.dir/src/SOURCES/Window.cpp.o
+Overclock: CMakeFiles/Overclock.dir/src/SOURCES/Global.cpp.o
+Overclock: CMakeFiles/Overclock.dir/src/SOURCES/About.cpp.o
+Overclock: CMakeFiles/Overclock.dir/build/.rcc/qrc_resources.cpp.o
 Overclock: CMakeFiles/Overclock.dir/build.make
 Overclock: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 Overclock: /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2
@@ -98,7 +239,7 @@ Overclock: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 Overclock: /usr/lib/x86_64-linux-gnu/libGLX.so
 Overclock: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 Overclock: CMakeFiles/Overclock.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Overclock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable Overclock"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Overclock.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -109,7 +250,8 @@ CMakeFiles/Overclock.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/Overclock.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/Overclock.dir/clean
 
-CMakeFiles/Overclock.dir/depend:
+CMakeFiles/Overclock.dir/depend: .rcc/qrc_resources.cpp
+CMakeFiles/Overclock.dir/depend: Overclock_autogen/timestamp
 	cd /home/savouryspringtu/Tu/Projects/Overclock/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/savouryspringtu/Tu/Projects/Overclock /home/savouryspringtu/Tu/Projects/Overclock /home/savouryspringtu/Tu/Projects/Overclock/build /home/savouryspringtu/Tu/Projects/Overclock/build /home/savouryspringtu/Tu/Projects/Overclock/build/CMakeFiles/Overclock.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/Overclock.dir/depend
 
