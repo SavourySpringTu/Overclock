@@ -32,9 +32,9 @@ struct qt_meta_stringdata_Monitor_t {
     char stringdata1[21];
     char stringdata2[1];
     char stringdata3[12];
-    char stringdata4[15];
+    char stringdata4[18];
     char stringdata5[9];
-    char stringdata6[15];
+    char stringdata6[18];
     char stringdata7[9];
     char stringdata8[15];
     char stringdata9[9];
@@ -49,22 +49,22 @@ Q_CONSTINIT static const qt_meta_stringdata_Monitor_t qt_meta_stringdata_Monitor
         QT_MOC_LITERAL(8, 20),  // "updateTemperatureCPU"
         QT_MOC_LITERAL(29, 0),  // ""
         QT_MOC_LITERAL(30, 11),  // "temperature"
-        QT_MOC_LITERAL(42, 14),  // "updateUsageCPU"
-        QT_MOC_LITERAL(57, 8),  // "usagecpu"
-        QT_MOC_LITERAL(66, 14),  // "updateUsageRAM"
-        QT_MOC_LITERAL(81, 8),  // "usageram"
-        QT_MOC_LITERAL(90, 14),  // "updateClockCPU"
-        QT_MOC_LITERAL(105, 8),  // "clockcpu"
-        QT_MOC_LITERAL(114, 9),  // "getThread"
-        QT_MOC_LITERAL(124, 7)   // "Thread*"
+        QT_MOC_LITERAL(42, 17),  // "updatePerUsageCPU"
+        QT_MOC_LITERAL(60, 8),  // "usagecpu"
+        QT_MOC_LITERAL(69, 17),  // "updatePerUsageRAM"
+        QT_MOC_LITERAL(87, 8),  // "usageram"
+        QT_MOC_LITERAL(96, 14),  // "updateClockCPU"
+        QT_MOC_LITERAL(111, 8),  // "clockcpu"
+        QT_MOC_LITERAL(120, 9),  // "getThread"
+        QT_MOC_LITERAL(130, 7)   // "Thread*"
     },
     "Monitor",
     "updateTemperatureCPU",
     "",
     "temperature",
-    "updateUsageCPU",
+    "updatePerUsageCPU",
     "usagecpu",
-    "updateUsageRAM",
+    "updatePerUsageRAM",
     "usageram",
     "updateClockCPU",
     "clockcpu",
@@ -116,10 +116,10 @@ Q_CONSTINIT const QMetaObject Monitor::staticMetaObject = { {
         // method 'updateTemperatureCPU'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<double, std::false_type>,
-        // method 'updateUsageCPU'
+        // method 'updatePerUsageCPU'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<double, std::false_type>,
-        // method 'updateUsageRAM'
+        // method 'updatePerUsageRAM'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<double, std::false_type>,
         // method 'updateClockCPU'
@@ -138,8 +138,8 @@ void Monitor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         (void)_t;
         switch (_id) {
         case 0: _t->updateTemperatureCPU((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 1: _t->updateUsageCPU((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 2: _t->updateUsageRAM((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 1: _t->updatePerUsageCPU((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 2: _t->updatePerUsageRAM((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         case 3: _t->updateClockCPU((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         case 4: { Thread* _r = _t->getThread();
             if (_a[0]) *reinterpret_cast< Thread**>(_a[0]) = std::move(_r); }  break;

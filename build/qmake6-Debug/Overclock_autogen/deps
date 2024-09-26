@@ -50,6 +50,7 @@ Overclock_autogen/timestamp: \
 	/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/3.29.3/CMakeSystem.cmake \
 	/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/Overclock_autogen/moc_predefs.h \
 	/home/savouryspringtu/Tu/Projects/Overclock/main.cpp \
+	/home/savouryspringtu/Tu/Projects/Overclock/resources.qrc \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
@@ -527,7 +528,6 @@ Overclock_autogen/timestamp: \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigExtras.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersion.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake \
-	/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreDependencies.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake \
 	/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreTargets-none.cmake \

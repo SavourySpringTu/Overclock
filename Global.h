@@ -2,6 +2,7 @@
 #define GLOBAL_H
 #include <QString>
 
-extern QString globalVar;
+extern QString PASSWORD;
+extern QString NAME_CPU;
 
 #endif // GLOBAL_H

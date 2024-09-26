@@ -20,9 +20,10 @@ class Monitor:public QWidget{
         void getClockRAM();
     public slots:
         void updateTemperatureCPU(double temperature);
-        void updateUsageCPU(double usagecpu);
-        void updateUsageRAM(double usageram);
+        void updatePerUsageCPU(double usagecpu);
+        void updatePerUsageRAM(double usageram);
         void updateClockCPU(double clockcpu);
+        // void update
         Thread * getThread() const;
     private:
         QTextEdit *textedit_cpuTemp;

@@ -1,5 +1,6 @@
 #include "Window.h"
 #include "Monitor.h"
+#include "Information.h"
 #include "Thread.h"
 #include "Global.h"
 #include "About.h"
@@ -10,7 +11,7 @@
 
 Window::Window(QWidget *parent) : QWidget(parent) {
     //authentication(parent);
-    globalVar = "Tu0562129598";
+    PASSWORD = "Tu0562129598";
     setWindowTitle("Overclock");
     setWindowIcon(QIcon(":/microchip-solid.svg"));
     setFixedSize(650, 600);
@@ -32,10 +33,8 @@ Window::Window(QWidget *parent) : QWidget(parent) {
 void Window::createTabWidget(){
     Monitor *monitor = new Monitor();
     monitorTab = monitor;
-    informationTab = new QWidget();
+    informationTab = new Information();
     aboutTab = new About();
-    QGridLayout *memoryLayout = new QGridLayout(informationTab);
-    informationTab->setLayout(memoryLayout);
     tabWidget->addTab(monitorTab, "Monitor");
     tabWidget->addTab(informationTab, "Infomation");
     tabWidget->addTab(aboutTab, "About");
@@ -67,7 +66,7 @@ void Window::authentication(QWidget *parent) {
         std::exit(EXIT_SUCCESS);
     } else {
         if (checkPassword(password)) {
-            globalVar = password;
+            PASSWORD = password;
         } else {
             authentication(parent);
         }

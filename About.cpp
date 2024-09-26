@@ -20,17 +20,7 @@ About::About(QWidget *parent) : QWidget(parent) {
 
     // Thêm hình ảnh
     QLabel *imageLabel = new QLabel(this);
-    if (QResource(":/resources/avt.jpg").isValid()) {
-        qDebug() << "Resource is valid!";
-    } else {
-        qDebug() << "Resource is invalid!";
-    }
     QPixmap pixmap(":/resources/avt.jpg");
-    if (!pixmap.isNull()) {
-        qDebug() << "Pixmap is valid!";
-    } else {
-        qDebug() << "Pixmap is invalid!";
-    }
     imageLabel->setPixmap(pixmap);
     layout->addWidget(aboutLabel);
     layout->addWidget(imageLabel); // Thêm hình ảnh vào layout

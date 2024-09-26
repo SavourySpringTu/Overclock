@@ -29,12 +29,12 @@ namespace {
 struct qt_meta_stringdata_Thread_t {
     uint offsetsAndSizes[20];
     char stringdata0[7];
-    char stringdata1[19];
+    char stringdata1[22];
     char stringdata2[1];
     char stringdata3[12];
-    char stringdata4[16];
+    char stringdata4[19];
     char stringdata5[9];
-    char stringdata6[16];
+    char stringdata6[19];
     char stringdata7[9];
     char stringdata8[16];
     char stringdata9[9];
@@ -44,25 +44,25 @@ struct qt_meta_stringdata_Thread_t {
 Q_CONSTINIT static const qt_meta_stringdata_Thread_t qt_meta_stringdata_Thread = {
     {
         QT_MOC_LITERAL(0, 6),  // "Thread"
-        QT_MOC_LITERAL(7, 18),  // "temperatureUpdated"
-        QT_MOC_LITERAL(26, 0),  // ""
-        QT_MOC_LITERAL(27, 11),  // "temperature"
-        QT_MOC_LITERAL(39, 15),  // "usagecpuUpdated"
-        QT_MOC_LITERAL(55, 8),  // "usagecpu"
-        QT_MOC_LITERAL(64, 15),  // "usageramUpdated"
-        QT_MOC_LITERAL(80, 8),  // "usageram"
-        QT_MOC_LITERAL(89, 15),  // "clockcpuUpdated"
-        QT_MOC_LITERAL(105, 8)   // "clockcpu"
+        QT_MOC_LITERAL(7, 21),  // "temperatureCPUUpdated"
+        QT_MOC_LITERAL(29, 0),  // ""
+        QT_MOC_LITERAL(30, 11),  // "temperature"
+        QT_MOC_LITERAL(42, 18),  // "perUsageCPUUpdated"
+        QT_MOC_LITERAL(61, 8),  // "usagecpu"
+        QT_MOC_LITERAL(70, 18),  // "perUsageRAMUpdated"
+        QT_MOC_LITERAL(89, 8),  // "usageram"
+        QT_MOC_LITERAL(98, 15),  // "clockCPUUpdated"
+        QT_MOC_LITERAL(114, 8)   // "clockcpu"
     },
     "Thread",
-    "temperatureUpdated",
+    "temperatureCPUUpdated",
     "",
     "temperature",
-    "usagecpuUpdated",
+    "perUsageCPUUpdated",
     "usagecpu",
-    "usageramUpdated",
+    "perUsageRAMUpdated",
     "usageram",
-    "clockcpuUpdated",
+    "clockCPUUpdated",
     "clockcpu"
 };
 #undef QT_MOC_LITERAL
@@ -105,16 +105,16 @@ Q_CONSTINIT const QMetaObject Thread::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_Thread_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<Thread, std::true_type>,
-        // method 'temperatureUpdated'
+        // method 'temperatureCPUUpdated'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<double, std::false_type>,
-        // method 'usagecpuUpdated'
+        // method 'perUsageCPUUpdated'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<double, std::false_type>,
-        // method 'usageramUpdated'
+        // method 'perUsageRAMUpdated'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<double, std::false_type>,
-        // method 'clockcpuUpdated'
+        // method 'clockCPUUpdated'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<double, std::false_type>
     >,
@@ -127,38 +127,38 @@ void Thread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         auto *_t = static_cast<Thread *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->temperatureUpdated((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 1: _t->usagecpuUpdated((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 2: _t->usageramUpdated((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 3: _t->clockcpuUpdated((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 0: _t->temperatureCPUUpdated((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 1: _t->perUsageCPUUpdated((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 2: _t->perUsageRAMUpdated((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 3: _t->clockCPUUpdated((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (Thread::*)(double );
-            if (_t _q_method = &Thread::temperatureUpdated; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Thread::temperatureCPUUpdated; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
             }
         }
         {
             using _t = void (Thread::*)(double );
-            if (_t _q_method = &Thread::usagecpuUpdated; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Thread::perUsageCPUUpdated; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 1;
                 return;
             }
         }
         {
             using _t = void (Thread::*)(double );
-            if (_t _q_method = &Thread::usageramUpdated; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Thread::perUsageRAMUpdated; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 2;
                 return;
             }
         }
         {
             using _t = void (Thread::*)(double );
-            if (_t _q_method = &Thread::clockcpuUpdated; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &Thread::clockCPUUpdated; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 3;
                 return;
             }
@@ -197,28 +197,28 @@ int Thread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void Thread::temperatureUpdated(double _t1)
+void Thread::temperatureCPUUpdated(double _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 
 // SIGNAL 1
-void Thread::usagecpuUpdated(double _t1)
+void Thread::perUsageCPUUpdated(double _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 
 // SIGNAL 2
-void Thread::usageramUpdated(double _t1)
+void Thread::perUsageRAMUpdated(double _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);
 }
 
 // SIGNAL 3
-void Thread::clockcpuUpdated(double _t1)
+void Thread::clockCPUUpdated(double _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);

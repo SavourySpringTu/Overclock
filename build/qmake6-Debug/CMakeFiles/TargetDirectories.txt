@@ -1,5 +1,4 @@
 /home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/Overclock.dir
-/home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/Overclock_other_files.dir
 /home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/edit_cache.dir
 /home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/rebuild_cache.dir
 /home/savouryspringtu/Tu/Projects/Overclock/build/qmake6-Debug/CMakeFiles/list_install_components.dir

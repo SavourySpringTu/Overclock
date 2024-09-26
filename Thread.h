@@ -11,15 +11,15 @@ class Thread: public QThread{
     public:
         Thread(QObject *parent = nullptr);
     signals:
-        void temperatureUpdated(double temperature);
-        void usagecpuUpdated(double usagecpu);
-        void usageramUpdated(double usageram );
-        void clockcpuUpdated(double clockcpu);
+        void temperatureCPUUpdated(double temperature);
+        void perUsageCPUUpdated(double usagecpu);
+        void perUsageRAMUpdated(double usageram );
+        void clockCPUUpdated(double clockcpu);
     private:
         void run() override;
         double getTemperatureCPU();
-        double getUsageCPU();
-        double getUsageRAM();
+        double getPerUsageCPU();
+        double getPerUsageRAM();
         double getClockCPU();
 };
 

@@ -1,4 +1,5 @@
 #include "Global.h"
 
 // Định nghĩa và khởi tạo biến global
-QString globalVar = "";
+QString PASSWORD = "";
+QString NAME_CPU ="";

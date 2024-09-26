@@ -59,10 +59,9 @@ else()
 endif()
 
 # Thêm tệp tài nguyên sau khi đã định nghĩa executable
-qt_add_resources(Overclock "resources"
-    PREFIX "/"
-    FILES "resources/resources.qrc"
-)
+qt_add_resources(SOURCES resources.qrc)
+
+# Tạo file thực thi
 
 # Liên kết với các thư viện Widgets của Qt
 target_link_libraries(Overclock PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)

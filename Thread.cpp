@@ -1,5 +1,5 @@
 #include "Thread.h"
-#include "Window.h"
+#include "Global.h"
 #include <QFile>
 #include <QDebug>
 #include <QtNumeric>
@@ -8,22 +8,26 @@
 #include <QRegularExpression>
 
 static const QRegularExpression myRegex("\\s+");
-QRegularExpression cpuGetClockRegex("cpu MHz\\s+:\\s+(\\d+\\.\\d+)");
+static const QRegularExpression cpuGetClockCPURegex("cpu MHz\\s+:\\s+(\\d+\\.\\d+)");
+static const QRegularExpression cpuGetNameCPURegex("model name\\s+:\\s+([A-Za-z0-9 ]+)");
+
+
 
 Thread::Thread(QObject *parent) : QThread(parent) {
 
 }
 void Thread::run(){
     while(!isInterruptionRequested()){
-        double usagecpu = getUsageCPU();
-        double temperature = getTemperatureCPU();
-        double usageram = getUsageRAM();
-
+        double usagecpu = getPerUsageCPU();
+        double temperaturecpu = getTemperatureCPU();
+        double usageram = getPerUsageRAM();
         double clockcpu = getClockCPU();
-        emit usagecpuUpdated(usagecpu);
-        emit temperatureUpdated(temperature);
-        emit usageramUpdated(usageram);
-        emit clockcpuUpdated(clockcpu);
+
+        emit clockCPUUpdated(clockcpu);
+        emit perUsageCPUUpdated(usagecpu);
+        emit temperatureCPUUpdated(temperaturecpu);
+        emit perUsageRAMUpdated(usageram);
+
         QThread::msleep(1000);
     }
 }
@@ -37,7 +41,7 @@ double Thread::getTemperatureCPU(){
     file.close();
     return temperature;
 }
-double Thread::getUsageCPU(){
+double Thread::getPerUsageCPU(){
     QFile file("/proc/stat");
 
     if (!file.open(QFile::ReadOnly | QFile::Text)) {
@@ -67,7 +71,7 @@ double Thread::getUsageCPU(){
     double usagecpu = ((total2 - total1)-(cpuValues.at(4).toDouble()-idle1) )/ (total2-total1) * 100.0;
     return usagecpu;
 }
-double Thread :: getUsageRAM(){
+double Thread :: getPerUsageRAM(){
     QFile file("/proc/meminfo");
     if (!file.open(QFile::ReadOnly | QFile::Text)) {
         return 0.0;
@@ -79,34 +83,35 @@ double Thread :: getUsageRAM(){
     QStringList s2 = lineFree.split(myRegex);
     return ((s1.at(1).toDouble()-s2.at(1).toDouble())/s1.at(1).toDouble())*100;
 }
-double Thread :: getClockCPU(){
-    double  total=0;
-    int count =1;
+double Thread::getClockCPU() {
+    double total = 0.0;
+    int count = 0;
     QString line;
     QFile file("/proc/cpuinfo");
+
+    if (!file.open(QIODevice::ReadOnly)) {
+        qWarning("Cannot open file for reading");
+        return 1;
+    }
+
     QTextStream in(&file);
-    while (!in.atEnd()) {
+    QRegularExpressionMatch match;
+
+    do{
         line = in.readLine();
-        qDebug() << line; // In ra tất cả các dòng
-    }
-    if (!file.open(QFile::ReadOnly | QFile::Text)) {
-        return 0.0;
-    }
+        match = cpuGetClockCPURegex.match(line);
+        if (match.hasMatch()) {
+            double cpuMHz = match.captured(1).toDouble();
+            total += cpuMHz;
+            count++;
+        }
+    }while(in.atEnd()==false);
+    file.close();
 
-    // QTextStream in(&file);
-    // QRegularExpressionMatch match;
-
-    // while (!in.atEnd()) {
-    //     line = in.readLine();
-    //     match = cpuGetClockRegex.match(line);
-    //     qDebug() << "Reading line:" << line; // Kiểm tra dòng đọc
-    //     if (match.hasMatch()) {
-    //         qDebug()<<match.captured(1).toDouble();
-    //         total += match.captured(1).toDouble();
-    //     }
-    //     count ++;
-    // }
-    // file.close();
-    total = total/count;
+    if (count > 0) {
+        total /= count;
+    } else {
+        qDebug() << "No valid CPU MHz entries found.";
+    }
     return total;
 }

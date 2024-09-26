@@ -100,10 +100,10 @@ Monitor::Monitor(QWidget *parent) : QWidget(parent) {
     setLayout(mainLayout);
     getClockRAM();
     thread = new Thread(this);
-    connect(thread, &Thread::temperatureUpdated, this, &Monitor::updateTemperatureCPU);
-    connect(thread, &Thread::usagecpuUpdated, this, &Monitor::updateUsageCPU);
-    connect(thread, &Thread::usageramUpdated, this, &Monitor::updateUsageRAM);
-    connect(thread, &Thread::clockcpuUpdated, this, &Monitor::updateClockCPU);
+    connect(thread, &Thread::temperatureCPUUpdated, this, &Monitor::updateTemperatureCPU);
+    connect(thread, &Thread::perUsageCPUUpdated, this, &Monitor::updatePerUsageCPU);
+    connect(thread, &Thread::perUsageRAMUpdated, this, &Monitor::updatePerUsageRAM);
+    connect(thread, &Thread::clockCPUUpdated, this, &Monitor::updateClockCPU);
     thread->start();
 }
 
@@ -113,12 +113,12 @@ void Monitor::updateTemperatureCPU(double temperature) {
     textedit_cpuTemp->setText(temperatureString);
 }
 
-void Monitor::updateUsageCPU(double usagecpu) {
+void Monitor::updatePerUsageCPU(double usagecpu) {
     double roundedUsagecpu = qRound(usagecpu);
     QString usagecpuString = QString("%1%").arg(roundedUsagecpu);
     textedit_cpuUse->setText(usagecpuString);
 }
-void Monitor::updateUsageRAM(double usageram) {
+void Monitor::updatePerUsageRAM(double usageram) {
     double roundedUsagecpu = qRound(usageram);
     QString usagecpuString = QString("%1%").arg(roundedUsagecpu);
     textedit_ramUse->setText(usagecpuString);
@@ -131,7 +131,7 @@ void Monitor::getClockRAM() {
 
     process.start("sudo", arguments);
     if (process.waitForStarted()) {
-        process.write((globalVar + "\n").toLocal8Bit());
+        process.write((PASSWORD + "\n").toLocal8Bit());
         process.closeWriteChannel();
 
         if (process.waitForFinished()) {
@@ -139,18 +139,17 @@ void Monitor::getClockRAM() {
             QStringList lines = output.split('\n');
             for (const QString &line : lines) {
                 if (line.contains("Configured Memory Speed:")) {
-                    speeds = line.split(':').last().trimmed().split(' ').first()+" Hz";
+                    speeds = line.split(':').last().trimmed().split(' ').first()+" MHz";
                     break;
                 }
             }
-            textedit_ramClock->setText(speeds);
         }
     }
     textedit_ramClock->setText(speeds);
 }
 void Monitor:: updateClockCPU(double clockcpu){
     double roundedClockcpu = qRound(clockcpu);
-    QString clockcpuString = QString("%1%").arg(roundedClockcpu);
+    QString clockcpuString = QString("%1 MHz").arg(roundedClockcpu);
     textedit_cpuClock->setText(clockcpuString);
 }
 Thread* Monitor::getThread() const {
