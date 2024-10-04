@@ -4,6 +4,8 @@
 #include <QTabWidget>
 #include <QWidget>
 #include <QPushButton>
+#include <QCloseEvent>
+#include "Monitor.h"
 
 class Window: public QWidget{
     Q_OBJECT
@@ -11,13 +13,13 @@ class Window: public QWidget{
     public:
         Window(QWidget *parent = nullptr);
         void createTabWidget();
-        void setupExitButton();
         void authentication(QWidget *parent);
         bool checkPassword(const QString &password);
+    protected:
+        void closeEvent(QCloseEvent *event) override;
     private:
-        QPushButton *button_exit;
         QTabWidget *tabWidget;
-        QWidget *monitorTab;
+        Monitor *monitorTab;
         QWidget *informationTab;
         QWidget *aboutTab;
 };

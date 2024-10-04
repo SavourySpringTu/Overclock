@@ -27,19 +27,22 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_Monitor_t {
-    uint offsetsAndSizes[24];
+    uint offsetsAndSizes[30];
     char stringdata0[8];
     char stringdata1[21];
     char stringdata2[1];
     char stringdata3[12];
     char stringdata4[18];
     char stringdata5[9];
-    char stringdata6[18];
-    char stringdata7[9];
-    char stringdata8[15];
-    char stringdata9[9];
-    char stringdata10[10];
-    char stringdata11[8];
+    char stringdata6[29];
+    char stringdata7[15];
+    char stringdata8[9];
+    char stringdata9[19];
+    char stringdata10[9];
+    char stringdata11[25];
+    char stringdata12[6];
+    char stringdata13[10];
+    char stringdata14[8];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_Monitor_t::offsetsAndSizes) + ofs), len 
@@ -51,12 +54,15 @@ Q_CONSTINIT static const qt_meta_stringdata_Monitor_t qt_meta_stringdata_Monitor
         QT_MOC_LITERAL(30, 11),  // "temperature"
         QT_MOC_LITERAL(42, 17),  // "updatePerUsageCPU"
         QT_MOC_LITERAL(60, 8),  // "usagecpu"
-        QT_MOC_LITERAL(69, 17),  // "updatePerUsageRAM"
-        QT_MOC_LITERAL(87, 8),  // "usageram"
-        QT_MOC_LITERAL(96, 14),  // "updateClockCPU"
-        QT_MOC_LITERAL(111, 8),  // "clockcpu"
-        QT_MOC_LITERAL(120, 9),  // "getThread"
-        QT_MOC_LITERAL(130, 7)   // "Thread*"
+        QT_MOC_LITERAL(69, 28),  // "updatePerUsageRAMandUsageRAM"
+        QT_MOC_LITERAL(98, 14),  // "vector<double>"
+        QT_MOC_LITERAL(113, 8),  // "usageram"
+        QT_MOC_LITERAL(122, 18),  // "updateCoreClockCPU"
+        QT_MOC_LITERAL(141, 8),  // "clockcpu"
+        QT_MOC_LITERAL(150, 24),  // "eventChangeOperationMode"
+        QT_MOC_LITERAL(175, 5),  // "index"
+        QT_MOC_LITERAL(181, 9),  // "getThread"
+        QT_MOC_LITERAL(191, 7)   // "Thread*"
     },
     "Monitor",
     "updateTemperatureCPU",
@@ -64,10 +70,13 @@ Q_CONSTINIT static const qt_meta_stringdata_Monitor_t qt_meta_stringdata_Monitor
     "temperature",
     "updatePerUsageCPU",
     "usagecpu",
-    "updatePerUsageRAM",
+    "updatePerUsageRAMandUsageRAM",
+    "vector<double>",
     "usageram",
-    "updateClockCPU",
+    "updateCoreClockCPU",
     "clockcpu",
+    "eventChangeOperationMode",
+    "index",
     "getThread",
     "Thread*"
 };
@@ -80,7 +89,7 @@ Q_CONSTINIT static const uint qt_meta_data_Monitor[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -88,18 +97,20 @@ Q_CONSTINIT static const uint qt_meta_data_Monitor[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   44,    2, 0x0a,    1 /* Public */,
-       4,    1,   47,    2, 0x0a,    3 /* Public */,
-       6,    1,   50,    2, 0x0a,    5 /* Public */,
-       8,    1,   53,    2, 0x0a,    7 /* Public */,
-      10,    0,   56,    2, 0x10a,    9 /* Public | MethodIsConst  */,
+       1,    1,   50,    2, 0x0a,    1 /* Public */,
+       4,    1,   53,    2, 0x0a,    3 /* Public */,
+       6,    1,   56,    2, 0x0a,    5 /* Public */,
+       9,    1,   59,    2, 0x0a,    7 /* Public */,
+      11,    1,   62,    2, 0x0a,    9 /* Public */,
+      13,    0,   65,    2, 0x10a,   11 /* Public | MethodIsConst  */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Double,    3,
     QMetaType::Void, QMetaType::Double,    5,
-    QMetaType::Void, QMetaType::Double,    7,
-    QMetaType::Void, QMetaType::Double,    9,
-    0x80000000 | 11,
+    QMetaType::Void, 0x80000000 | 7,    8,
+    QMetaType::Void, QMetaType::Double,   10,
+    QMetaType::Void, QMetaType::Int,   12,
+    0x80000000 | 14,
 
        0        // eod
 };
@@ -119,12 +130,15 @@ Q_CONSTINIT const QMetaObject Monitor::staticMetaObject = { {
         // method 'updatePerUsageCPU'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<double, std::false_type>,
-        // method 'updatePerUsageRAM'
+        // method 'updatePerUsageRAMandUsageRAM'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<vector<double>, std::false_type>,
+        // method 'updateCoreClockCPU'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<double, std::false_type>,
-        // method 'updateClockCPU'
+        // method 'eventChangeOperationMode'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<double, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'getThread'
         QtPrivate::TypeAndForceComplete<Thread *, std::false_type>
     >,
@@ -139,9 +153,10 @@ void Monitor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         switch (_id) {
         case 0: _t->updateTemperatureCPU((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         case 1: _t->updatePerUsageCPU((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 2: _t->updatePerUsageRAM((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 3: _t->updateClockCPU((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
-        case 4: { Thread* _r = _t->getThread();
+        case 2: _t->updatePerUsageRAMandUsageRAM((*reinterpret_cast< std::add_pointer_t<vector<double>>>(_a[1]))); break;
+        case 3: _t->updateCoreClockCPU((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 4: _t->eventChangeOperationMode((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 5: { Thread* _r = _t->getThread();
             if (_a[0]) *reinterpret_cast< Thread**>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
@@ -167,13 +182,13 @@ int Monitor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 6)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 6;
     }
     return _id;
 }

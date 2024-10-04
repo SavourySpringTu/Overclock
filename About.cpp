@@ -18,11 +18,10 @@ About::About(QWidget *parent) : QWidget(parent) {
         );
     aboutLabel->setWordWrap(true);
 
-    // Thêm hình ảnh
     QLabel *imageLabel = new QLabel(this);
-    QPixmap pixmap(":/resources/avt.jpg");
+    QPixmap pixmap(":/resources/microchip.svg");
     imageLabel->setPixmap(pixmap);
     layout->addWidget(aboutLabel);
-    layout->addWidget(imageLabel); // Thêm hình ảnh vào layout
+    layout->addWidget(imageLabel);
     setLayout(layout);
 }

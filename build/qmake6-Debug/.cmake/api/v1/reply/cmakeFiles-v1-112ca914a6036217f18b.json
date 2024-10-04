@@ -831,9 +831,6 @@
 			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake"
 		},
 		{
-			"path" : "resources.qrc"
-		},
-		{
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/home/savouryspringtu/Qt/Tools/CMake/share/cmake-3.29/Modules/GNUInstallDirs.cmake"

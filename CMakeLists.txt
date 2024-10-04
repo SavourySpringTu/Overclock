@@ -59,7 +59,7 @@ else()
 endif()
 
 # Thêm tệp tài nguyên sau khi đã định nghĩa executable
-qt_add_resources(SOURCES resources.qrc)
+qt_add_resources(YOUR_TARGET "/resources.qrc")
 
 # Tạo file thực thi
 
