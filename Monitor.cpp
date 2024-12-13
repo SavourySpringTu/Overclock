@@ -10,7 +10,7 @@
 QStringList listScalingAvailabel;
 
 Monitor::Monitor(QWidget *parent) : QWidget(parent) {
-    setFixedSize(650, 300);
+    setFixedSize(650, 400);
 
     label_temperatureCPU = new QLabel("Temperature", this);
     label_temperatureCPU->setAlignment(Qt::AlignRight);
@@ -42,6 +42,11 @@ Monitor::Monitor(QWidget *parent) : QWidget(parent) {
     label_operationMode->setFixedHeight(20);
     label_operationMode->setFixedWidth(100);
 
+    label_powerConsumption = new QLabel("Power Usage", this);
+    label_powerConsumption->setAlignment(Qt::AlignRight);
+    label_powerConsumption->setFixedHeight(20);
+    label_powerConsumption->setFixedWidth(100);
+
     textedit_perUsageCPU = new QTextEdit(this);
     textedit_perUsageCPU->setFixedHeight(25);
     textedit_perUsageCPU->setFixedWidth(100);
@@ -53,10 +58,6 @@ Monitor::Monitor(QWidget *parent) : QWidget(parent) {
     textedit_temperatureCPU->setFixedWidth(100);
     textedit_temperatureCPU->setReadOnly(true);
     textedit_temperatureCPU->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-
-    QPalette palette = textedit_temperatureCPU->palette();
-    palette.setColor(QPalette::Text, Qt::red);
-    textedit_temperatureCPU->setPalette(palette);
 
     textedit_coreClockCPU = new QTextEdit(this);
     textedit_coreClockCPU->setFixedHeight(25);
@@ -75,6 +76,12 @@ Monitor::Monitor(QWidget *parent) : QWidget(parent) {
     textedit_perUsageRAM->setFixedWidth(100);
     textedit_perUsageRAM->setReadOnly(true);
     textedit_perUsageRAM->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+    textedit_powerConsumption = new QTextEdit(this);
+    textedit_powerConsumption->setFixedHeight(25);
+    textedit_powerConsumption->setFixedWidth(100);
+    textedit_powerConsumption->setReadOnly(true);
+    textedit_powerConsumption->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
     combobox_operationMode = new QComboBox(this);
     combobox_operationMode->setFixedHeight(30);
@@ -106,24 +113,34 @@ Monitor::Monitor(QWidget *parent) : QWidget(parent) {
     layoutRAM->setAlignment(label_usageRAM, Qt::AlignLeft);
     ramGroup->setLayout(layoutRAM);
 
+    powerGroup = new QGroupBox("Power");
+    QGridLayout *layoutPower = new QGridLayout(powerGroup);
+    layoutPower->addWidget(label_powerConsumption, 0, 0);
+    layoutPower->addWidget(textedit_powerConsumption, 0, 1);
+    layoutPower->setAlignment(label_powerConsumption, Qt::AlignLeft);
+    powerGroup->setLayout(layoutPower);
+
     overclockGroup = new QGroupBox("OverClock",this);
     QGridLayout *layoutOverClock = new QGridLayout(overclockGroup);
     layoutOverClock->addWidget(label_operationMode, 0, 0);
     layoutOverClock->addWidget(combobox_operationMode, 0, 1);
     layoutOverClock->setAlignment(label_operationMode, Qt::AlignLeft);
+    overclockGroup->setLayout(layoutOverClock);
 
     getScalingAvailabel();
     for(auto i: listScalingAvailabel){
         i[0] = i[0].toUpper();
         combobox_operationMode->addItem(i);
     }
-    for (int i = 0; i < 5; ++i) {
+    for (int i = 0; i < 6; ++i) {
         layoutProcessor->setColumnStretch(i, 1);
         layoutRAM->setColumnStretch(i, 1);
+        layoutPower->setColumnStretch(i, 1);
         layoutOverClock->setColumnStretch(i, 1);
     }
     mainLayout->addWidget(processorGroup);
     mainLayout->addWidget(ramGroup);
+    mainLayout->addWidget(powerGroup);
     mainLayout->addWidget(overclockGroup);
     setLayout(mainLayout);
 
@@ -135,14 +152,44 @@ Monitor::Monitor(QWidget *parent) : QWidget(parent) {
     connect(thread, &Thread::perUsageCPUUpdated, this, &Monitor::updatePerUsageCPU);
     connect(thread, &Thread::usageRAMUpdated, this, &Monitor::updatePerUsageRAMandUsageRAM);
     connect(thread, &Thread::coreClockCPUUpdated, this, &Monitor::updateCoreClockCPU);
+    connect(thread, &Thread::powerConsumptionUpdated,this, &Monitor::updateConsumptionPower);
 
     connect(combobox_operationMode, &QComboBox::currentIndexChanged, this, &Monitor::eventChangeOperationMode);
 
     thread->start();
 }
 
+QColor Monitor:: colorofTemperatureCPU(double temp){
+    int temp1 = temp;
+    QColor color(0,0,0);
+    if(temp1 <=40){
+        color.setRed(0);
+        color.setGreen(255);
+        color.setBlue(0);
+    }else if(temp1 > 40 && temp1 <=65){
+        color.setRed((temp-40)*10);
+        color.setGreen(255);
+        color.setBlue(0);
+    }else if(temp1 >65 && temp1 <=90){
+        color.setGreen(255-((temp1 -65)*10));
+        color.setRed(255);
+        color.setBlue(0);
+    }else{
+        color.setRed(255);
+        color.setGreen(0);
+        color.setBlue(0);
+    }
+    return color;
+}
+
 void Monitor::updateTemperatureCPU(double temperature) {
     QString temperatureString = QString::number(temperature,'f',0)+" °C";
+
+    // set color temperature
+    QPalette palette = textedit_temperatureCPU->palette();
+    palette.setColor(QPalette::Text, colorofTemperatureCPU(temperature));
+    textedit_temperatureCPU->setPalette(palette);
+
     textedit_temperatureCPU->setText(temperatureString);
 }
 
@@ -159,6 +206,10 @@ void Monitor::updatePerUsageRAMandUsageRAM(vector<double> perUsageRAMandUsageRam
 void Monitor:: updateCoreClockCPU(double clockcpu){
     QString clockcpuString = QString::number(clockcpu, 'f', 0) +" MHz";
     textedit_coreClockCPU->setText(clockcpuString);
+}
+void Monitor:: updateConsumptionPower(double consumptionpower){
+    QString consumptionpowerString = QString::number(consumptionpower, 'f', 0) +" W";
+    textedit_powerConsumption->setText(consumptionpowerString);
 }
 void Monitor::getScalingAvailabel(){
     QProcess process;

@@ -22,11 +22,13 @@ void Thread::run(){
         double temperaturecpu = getTemperatureCPU();
         vector<double> usageram = getUsageRAM();
         double clockcpu = getCoreClockCPU();
+        double consumption = getConsumptionPower();
 
         emit coreClockCPUUpdated(clockcpu);
         emit perUsageCPUUpdated(usagecpu);
         emit temperatureCPUUpdated(temperaturecpu);
         emit usageRAMUpdated(usageram);
+        emit powerConsumptionUpdated(consumption);
 
         QThread::msleep(1000);
     }
@@ -84,11 +86,13 @@ vector<double> Thread :: getUsageRAM(){
     QTextStream stream(&file);
     QString lineTotal = stream.readLine();
     QString lineFree = stream.readLine();
+    QString lineAvailible = stream.readLine();
     QStringList s1 = lineTotal.split(myRegex);
     QStringList s2 = lineFree.split(myRegex);
+    QStringList s3 = lineAvailible.split(myRegex);
     vector<double> result;
-    result.push_back(((s1.at(1).toDouble()-s2.at(1).toDouble())/s1.at(1).toDouble())*100);
-    result.push_back((s1.at(1).toDouble()-s2.at(1).toDouble())/1024);
+    result.push_back(((s1.at(1).toDouble()-s3.at(1).toDouble())/s1.at(1).toDouble())*100);
+    result.push_back((s1.at(1).toDouble()-s3.at(1).toDouble())/1024);
     return result;
 }
 double Thread::getCoreClockCPU() {
@@ -115,4 +119,24 @@ double Thread::getCoreClockCPU() {
     }while(in.atEnd()==false);
     file.close();
     return total/count;
+}
+double Thread::getConsumptionPower(){
+    QString line;
+    QFile file("/sys/class/power_supply/BAT0/voltage_now");
+    if(!file.open(QIODevice::ReadOnly)){
+        qDebug()<<"getConsumptionPower can't open file!";
+        return 1;
+    }
+    QTextStream stream(&file);
+    double voltage = stream.readAll().toDouble();
+    file.close();
+    QFile file1("/sys/class/power_supply/BAT0/current_now");
+    if(!file1.open(QIODevice::ReadOnly)){
+        qDebug()<<"getConsumptionPower can't open file1!";
+        return 1;
+    }
+    QTextStream stream1(&file1);
+    double current = stream1.readAll().toDouble();
+    file.close();
+    return (current*voltage)/1000000000000;
 }

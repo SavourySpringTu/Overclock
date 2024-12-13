@@ -27,7 +27,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 namespace {
 struct qt_meta_stringdata_Thread_t {
-    uint offsetsAndSizes[22];
+    uint offsetsAndSizes[26];
     char stringdata0[7];
     char stringdata1[22];
     char stringdata2[1];
@@ -39,6 +39,8 @@ struct qt_meta_stringdata_Thread_t {
     char stringdata8[9];
     char stringdata9[20];
     char stringdata10[9];
+    char stringdata11[24];
+    char stringdata12[11];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_Thread_t::offsetsAndSizes) + ofs), len 
@@ -54,7 +56,9 @@ Q_CONSTINIT static const qt_meta_stringdata_Thread_t qt_meta_stringdata_Thread =
         QT_MOC_LITERAL(86, 14),  // "vector<double>"
         QT_MOC_LITERAL(101, 8),  // "usageram"
         QT_MOC_LITERAL(110, 19),  // "coreClockCPUUpdated"
-        QT_MOC_LITERAL(130, 8)   // "clockcpu"
+        QT_MOC_LITERAL(130, 8),  // "clockcpu"
+        QT_MOC_LITERAL(139, 23),  // "powerConsumptionUpdated"
+        QT_MOC_LITERAL(163, 10)   // "usagepower"
     },
     "Thread",
     "temperatureCPUUpdated",
@@ -66,7 +70,9 @@ Q_CONSTINIT static const qt_meta_stringdata_Thread_t qt_meta_stringdata_Thread =
     "vector<double>",
     "usageram",
     "coreClockCPUUpdated",
-    "clockcpu"
+    "clockcpu",
+    "powerConsumptionUpdated",
+    "usagepower"
 };
 #undef QT_MOC_LITERAL
 } // unnamed namespace
@@ -77,24 +83,26 @@ Q_CONSTINIT static const uint qt_meta_data_Thread[] = {
       10,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       4,       // signalCount
+       5,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   38,    2, 0x06,    1 /* Public */,
-       4,    1,   41,    2, 0x06,    3 /* Public */,
-       6,    1,   44,    2, 0x06,    5 /* Public */,
-       9,    1,   47,    2, 0x06,    7 /* Public */,
+       1,    1,   44,    2, 0x06,    1 /* Public */,
+       4,    1,   47,    2, 0x06,    3 /* Public */,
+       6,    1,   50,    2, 0x06,    5 /* Public */,
+       9,    1,   53,    2, 0x06,    7 /* Public */,
+      11,    1,   56,    2, 0x06,    9 /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Double,    3,
     QMetaType::Void, QMetaType::Double,    5,
     QMetaType::Void, 0x80000000 | 7,    8,
     QMetaType::Void, QMetaType::Double,   10,
+    QMetaType::Void, QMetaType::Double,   12,
 
        0        // eod
 };
@@ -119,6 +127,9 @@ Q_CONSTINIT const QMetaObject Thread::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<vector<double>, std::false_type>,
         // method 'coreClockCPUUpdated'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<double, std::false_type>,
+        // method 'powerConsumptionUpdated'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<double, std::false_type>
     >,
     nullptr
@@ -134,6 +145,7 @@ void Thread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
         case 1: _t->perUsageCPUUpdated((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         case 2: _t->usageRAMUpdated((*reinterpret_cast< std::add_pointer_t<vector<double>>>(_a[1]))); break;
         case 3: _t->coreClockCPUUpdated((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
+        case 4: _t->powerConsumptionUpdated((*reinterpret_cast< std::add_pointer_t<double>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -166,6 +178,13 @@ void Thread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void
                 return;
             }
         }
+        {
+            using _t = void (Thread::*)(double );
+            if (_t _q_method = &Thread::powerConsumptionUpdated; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 4;
+                return;
+            }
+        }
     }
 }
 
@@ -188,13 +207,13 @@ int Thread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }
@@ -225,6 +244,13 @@ void Thread::coreClockCPUUpdated(double _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);
+}
+
+// SIGNAL 4
+void Thread::powerConsumptionUpdated(double _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 4, _a);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

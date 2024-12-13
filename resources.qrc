@@ -1,5 +1,5 @@
 <RCC>
-    <qresource prefix="/">
-        <file>resources/microchip.svg</file>
+    <qresource prefix="/images">
+        <file>resources/microchip-solid.svg</file>
     </qresource>
 </RCC>

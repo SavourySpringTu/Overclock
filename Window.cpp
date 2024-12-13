@@ -15,7 +15,7 @@ Window::Window(QWidget *parent) : QWidget(parent) {
     //authentication(parent);
     PASSWORD = "Tu0562129598";
     setWindowTitle("Overclock");
-    setWindowIcon(QIcon("/home/savouryspringtu/Tu/Projects/Overclock/resources/microchip.svg"));
+    setWindowIcon(QIcon(":/images/microchip-solid.svg"));
 
     // Create tab widget
     tabWidget = new QTabWidget(this);

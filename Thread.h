@@ -17,6 +17,7 @@ class Thread: public QThread{
         void perUsageCPUUpdated(double usagecpu);
         void usageRAMUpdated(vector<double> usageram );
         void coreClockCPUUpdated(double clockcpu);
+        void powerConsumptionUpdated(double usagepower);
     private:
         void run() override;
         double getTemperatureCPU();
@@ -24,6 +25,7 @@ class Thread: public QThread{
         vector<double> getUsageRAM();
         double getCoreClockCPU();
         double readUsageCPU();
+        double getConsumptionPower();
 };
 
 #endif // THREAD_H

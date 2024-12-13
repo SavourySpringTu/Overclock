@@ -24,6 +24,7 @@ class Monitor:public QWidget{
         void updatePerUsageRAMandUsageRAM(vector<double> usageram);
         void updateCoreClockCPU(double clockcpu);
         void eventChangeOperationMode(int index);
+        void updateConsumptionPower(double consumptionpower);
         Thread * getThread() const;
     private:
         QTextEdit *textedit_temperatureCPU;
@@ -31,6 +32,7 @@ class Monitor:public QWidget{
         QTextEdit *textedit_usageRAM;
         QTextEdit *textedit_perUsageRAM;
         QTextEdit *textedit_coreClockCPU;
+        QTextEdit *textedit_powerConsumption;
 
         QLabel *label_temperatureCPU;
         QLabel *label_perUsageCPU;
@@ -38,6 +40,7 @@ class Monitor:public QWidget{
         QLabel *label_perUsageRAM;
         QLabel *label_coreClockCPU;
         QLabel *label_operationMode;
+        QLabel *label_powerConsumption;
 
         QComboBox *combobox_operationMode;
 
@@ -45,10 +48,12 @@ class Monitor:public QWidget{
         Thread *thread;
         QGroupBox *processorGroup;
         QGroupBox *ramGroup;
+        QGroupBox *powerGroup;
         QGroupBox *overclockGroup;
         // function
         void getScalingAvailabel();
         void getOperationMode();
+        QColor colorofTemperatureCPU(double temp);
 };
 
 #endif // UI_MONITOR_H
