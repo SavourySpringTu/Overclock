@@ -1,8 +1,8 @@
 #include "Window.h"
 #include "Monitor.h"
 #include "Information.h"
+#include "Authentication.h"
 #include "Thread.h"
-#include "Global.h"
 #include "About.h"
 #include <QInputDialog>
 #include <QMessageBox>
@@ -12,10 +12,8 @@
 
 Window::Window(QWidget *parent) : QWidget(parent) {
     setFixedSize(650, 600);
-    //authentication(parent);
-    PASSWORD = "Tu0562129598";
     setWindowTitle("Overclock");
-    setWindowIcon(QIcon(":/images/microchip-solid.svg"));
+    setWindowIcon(QIcon(":/resources/microchip-solid.svg"));
 
     // Create tab widget
     tabWidget = new QTabWidget(this);
@@ -31,8 +29,10 @@ void Window::createTabWidget(){
     monitorTab = new Monitor();
     informationTab = new Information();
     aboutTab = new About();
+    authenticationTab = new Authentication();
     tabWidget->addTab(monitorTab, "Monitor");
     tabWidget->addTab(informationTab, "Infomation");
+    tabWidget->addTab(authenticationTab,"Authentication");
     tabWidget->addTab(aboutTab, "About");
 }
 void Window::closeEvent(QCloseEvent *event) { {
@@ -44,30 +44,4 @@ void Window::closeEvent(QCloseEvent *event) { {
         }
     }
     QApplication::quit();
-}
-void Window::authentication(QWidget *parent) {
-    bool ok;
-    QString password = QInputDialog::getText(parent, "ROOT", "Password:", QLineEdit::Password, "", &ok);
-    if (!ok) {
-        std::exit(EXIT_SUCCESS);
-    } else {
-        if (checkPassword(password)) {
-            PASSWORD = password;
-        } else {
-            authentication(parent);
-        }
-    }
-}
-bool Window::checkPassword(const QString &password) {
-    QProcess process;
-    QString command = "sudo -S true";
-    process.start(command);
-    process.write(password.toUtf8()+ "\n");
-    if(!process.waitForFinished(3000)==false){
-        qDebug()<<"Error Process";
-        process.close();
-        return false;
-    }
-    int status = process.exitCode();
-    return status;
 }

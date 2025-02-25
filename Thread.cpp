@@ -70,11 +70,12 @@ double Thread::getPerUsageCPU(){
     line = stream2.readLine();
     cpuValues = line.split(myRegex);
 
+    double idle2 = cpuValues.at(4).toDouble();
     double total2 = cpuValues.at(1).toDouble()+cpuValues.at(2).toDouble()+cpuValues.at(3).toDouble()+cpuValues.at(4)
     .toDouble()+cpuValues.at(5).toDouble()+cpuValues.at(6).toDouble()+cpuValues.at(7).toDouble();
     file.close();
 
-    double usagecpu = ((total2 - total1)-(cpuValues.at(4).toDouble()-idle1) )/ (total2-total1) * 100.0;
+    double usagecpu = ((total2 - total1)-(idle2-idle1) )/ (total2-total1) * 100.0;
     return usagecpu;
 }
 vector<double> Thread :: getUsageRAM(){

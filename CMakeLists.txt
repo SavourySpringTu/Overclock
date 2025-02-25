@@ -49,6 +49,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${SOURCES}
         ${HEADERS}
         ${FORMS}
+        Authentication.h
+        Authentication.cpp
+
+
     )
 else()
     add_executable(Overclock
@@ -59,7 +63,12 @@ else()
 endif()
 
 # Thêm tệp tài nguyên sau khi đã định nghĩa executable
-qt_add_resources(YOUR_TARGET "/resources.qrc")
+set_target_properties(Overclock PROPERTIES QT_RESOURCE_PREFIX "/")
+
+qt_add_resources(Overclock
+    PREFIX ""
+    FILES resources.qrc
+)
 
 # Tạo file thực thi
 

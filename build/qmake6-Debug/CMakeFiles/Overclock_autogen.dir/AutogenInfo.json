@@ -198,6 +198,7 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
 		"/home/savouryspringtu/Qt/Tools/CMake/share/cmake-3.29/Modules/GNUInstallDirs.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/savouryspringtu/Tu/Projects/Overclock",
@@ -210,6 +211,12 @@
 			"/home/savouryspringtu/Tu/Projects/Overclock/About.h",
 			"MU",
 			"EWIEGA46WW/moc_About.cpp",
+			null
+		],
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/Authentication.h",
+			"MU",
+			"EWIEGA46WW/moc_Authentication.cpp",
 			null
 		],
 		[
@@ -304,6 +311,11 @@
 	"SOURCES" : 
 	[
 		[ "/home/savouryspringtu/Tu/Projects/Overclock/About.cpp", "MU", null ],
+		[
+			"/home/savouryspringtu/Tu/Projects/Overclock/Authentication.cpp",
+			"MU",
+			null
+		],
 		[ "/home/savouryspringtu/Tu/Projects/Overclock/Global.cpp", "MU", null ],
 		[
 			"/home/savouryspringtu/Tu/Projects/Overclock/Information.cpp",

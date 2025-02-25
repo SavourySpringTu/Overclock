@@ -4,5 +4,6 @@
 
 extern QString PASSWORD;
 extern QString NAME_CPU;
+extern QString PATH_FILE_PASSWORD;
 
 #endif // GLOBAL_H

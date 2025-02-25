@@ -13,8 +13,6 @@ class Window: public QWidget{
     public:
         Window(QWidget *parent = nullptr);
         void createTabWidget();
-        void authentication(QWidget *parent);
-        bool checkPassword(const QString &password);
     protected:
         void closeEvent(QCloseEvent *event) override;
     private:
@@ -22,6 +20,7 @@ class Window: public QWidget{
         Monitor *monitorTab;
         QWidget *informationTab;
         QWidget *aboutTab;
+        QWidget *authenticationTab;
 };
 
 #endif // WINDOW_H

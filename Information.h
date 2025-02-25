@@ -26,7 +26,7 @@ class Information:public QWidget{
         QTextEdit *textedit_nameCPU;
         QTextEdit *textedit_coreCPU;
         QTextEdit *textedit_threadCPU;
-         QTextEdit *textedit_nameOperatingSystem;
+        QTextEdit *textedit_nameOperatingSystem;
         QTextEdit *textedit_versionOperatingSystem;
 
         QGroupBox *processorGroup;
